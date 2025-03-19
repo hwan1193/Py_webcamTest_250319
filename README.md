@@ -5,10 +5,17 @@
 
 
 >실시간 웹캠 영상을 파일(예: .avi, .mp4)로 저장합니다.
+
 >OpenCV의 VideoWriter를 사용할 수 있습니다.
->구현 방법 예시
+
+>구현 방법 :
+
 >UI: "Record" / "Stop Recording" 버튼 2개 추가
+
 >Thread:
+
 >self.video_writer = cv2.VideoWriter("output.avi", fourcc, fps, (width, height))
+
 >각 프레임 읽을 때마다 self.video_writer.write(frame) 호출
+
 >Stop 시 self.video_writer.release()
